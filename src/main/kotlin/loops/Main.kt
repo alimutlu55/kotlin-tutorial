@@ -4,12 +4,12 @@ package loops
 val fruits = listOf("Apple", "Banana", "Strawberry", "Orange")
 
 fun main() {
-    // dots()
+    dots()
     // until()
     // lastIndex()
     // indices()
     // withIndex()
-    forEachIndexed()
+    // forEachIndexed()
 }
 
 fun forEachIndexed() {

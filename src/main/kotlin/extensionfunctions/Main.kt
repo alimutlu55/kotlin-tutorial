@@ -1,13 +1,13 @@
 package extensionfunctions
 
-fun main(args: Array<String>) {
+fun main() {
     swap()
-    lastIndex()
-    removeFirstLastChar()
-    addFive()
-    concatenate()
-    double()
-    penultimateElement()
+//    lastIndex()
+//    removeFirstLastChar()
+//    addFive()
+//    concatenate()
+//    double()
+//    penultimateElement()
 }
 
 fun concatenate() {
