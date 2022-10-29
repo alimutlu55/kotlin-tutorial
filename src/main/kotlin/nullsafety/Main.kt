@@ -5,7 +5,9 @@ fun main() {
 //    nullable()
 //    nullableLength()
 //    safeCall()
-//    list()
+//    let()
+//    also()
+//    run()
 //    elvisOperator()
 //    nonNullOperator(null) // throws Exception
 //    safeCast()
@@ -35,11 +37,29 @@ fun safeCall() {
     println(a?.length) // Unnecessary safe call
 }
 
-fun list() {
+fun let() {
     val listWithNulls: List<String?> = listOf("Kotlin", null)
     for (item in listWithNulls) {
         item?.let { println(it) } // prints Kotlin and ignores null
     }
+}
+
+fun also() {
+    val listWithNulls: List<String?> = listOf("Kotlin", null)
+    var res = listOf<String?>()
+    for (item in listWithNulls) {
+        item?.let { res = res.plus(it); it }
+            ?.also { it -> println("non nullable value: $it") } //If we want to apply some additional operation, for example logging on every non-nullable value we can use an also() method and chain it with a let():
+    }
+}
+
+fun run() {
+    val listWithNulls: List<String?> = listOf("Kotlin", null)
+    var res = listOf<String?>()
+    for (item in listWithNulls) {
+        item?.run { res = res.plus(this) } // It's like let but the Run() Method operates on this reference instead of a function parameter:
+    }
+    println(res)
 }
 
 
@@ -58,7 +78,7 @@ fun nonNullOperator(text: String?) {
 fun safeCast() {
     var a: String? = null
     val aInt: Int? = a as? Int // wont throw an Exceptions
-   // val aIntThrowException: Int = a as Int
+    // val aIntThrowException: Int = a as Int
 }
 
 
