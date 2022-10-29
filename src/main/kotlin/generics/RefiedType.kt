@@ -1,7 +1,8 @@
 package generics
 
-import com.sun.org.slf4j.internal.Logger
-import com.sun.org.slf4j.internal.LoggerFactory
+import org.junit.platform.commons.logging.Logger
+import org.junit.platform.commons.logging.LoggerFactory
+
 
 inline fun <reified T> Iterable<*>.filterIsInstance() = filter { it is T }
 
