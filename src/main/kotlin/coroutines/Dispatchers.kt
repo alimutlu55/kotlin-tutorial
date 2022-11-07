@@ -27,3 +27,8 @@ fun dispatchers() = runBlocking {
         println("newSingleThreadContext: I'm working in thread ${Thread.currentThread().name}")
     }
 }
+
+
+suspend fun send() = coroutineScope{
+
+}
