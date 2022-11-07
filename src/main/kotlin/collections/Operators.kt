@@ -13,7 +13,27 @@ fun main() {
   // grouping()
   // reduction()
   // chunk()
-     chunk2()
+  // chunk2()
+     windowed()
+}
+
+private fun windowed() {
+    val theList = (1..6).toList()
+    val windowed = theList.windowed(3)
+
+    println(windowed.size)
+    println(windowed.first().contains(1))
+    println(windowed.first().contains(2))
+    println(windowed.first().contains(3))
+    println(windowed[1].contains(2))
+    println(windowed[1].contains(3))
+    println(windowed[1].contains(4))
+    println(windowed[2].contains(3))
+    println(windowed[2].contains(4))
+    println(windowed[2].contains(5))
+    println(windowed.last().contains(4))
+    println(windowed.last().contains(5))
+    println(windowed.last().contains(6))
 }
 
 fun chunk2() {
