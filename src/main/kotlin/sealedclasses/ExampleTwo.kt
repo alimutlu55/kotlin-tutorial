@@ -1,13 +1,13 @@
 package sealedclasses
 
 sealed class DemoOne {
-    class A : DemoOne() {
+    object A : DemoOne() {
         fun display() {
             println("Subclass A of Sealed class Demo ")
         }
     }
 
-    class B : DemoOne() {
+    object B : DemoOne() {
         fun display() {
             println("Subclass B of sealed class Demo")
         }
@@ -15,8 +15,8 @@ sealed class DemoOne {
 }
 
 fun main(args: Array<String>) {
-    val obj = DemoOne.B()
+    val obj = DemoOne.B
     obj.display()
-    val obj1 = DemoOne.A()
+    val obj1 = DemoOne.A
     obj1.display()
 }
