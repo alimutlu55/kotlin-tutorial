@@ -13,4 +13,9 @@ fun main() {
     writer.use {
         writer.write("something")
     }
+
+
+    // more short version
+    FileWriter("test.txt")
+        .use { w -> w.write("something") }
 }
